@@ -1,0 +1,48 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('bg.png');
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+.stoper{
+    padding: 2rem;
+    text-align: center;
+}
+
+.time{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+.hidden {
+    display: none;
+
+}
+
+
+.buttons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+button{
+    padding:10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    border:none;
+    background-color:darkolivegreen;
+    color: white;
+    font-family: monospace;
+
+    transition:background-color 0.2s;
+}
+
+.buttons :hover{
+    background-color: yellowgreen;
+}

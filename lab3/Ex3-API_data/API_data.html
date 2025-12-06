@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List - Exercise 3</title>
+    <link rel="stylesheet" href="API_data.css">
+</head>
+<body>
+
+<div class="controls">
+    <input type="text" id="searchInput" placeholder="Filter by phrase...">
+
+    <select id="sortSelect">
+        <option value="original">Original Order</option>
+        <option value="asc">Ascending (A-Z)</option>
+        <option value="desc">Descending (Z-A)</option>
+    </select>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>Image</th>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+</table>
+
+<script src="API_data.js"></script>
+</body>
+</html>
