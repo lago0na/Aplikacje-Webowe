@@ -1,0 +1,19 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    background-color: #70c5ce;
+    border: 2px solid #000;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
