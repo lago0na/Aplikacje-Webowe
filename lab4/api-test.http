@@ -1,0 +1,48 @@
+### 1. Rejestracja (Serwis 3)
+POST http://localhost:3003/api/register
+Content-Type: application/json
+
+{
+  "email": "student@agh.edu.pl",
+  "password": "tajnehaslo123"
+}
+
+### 2. Logowanie (Serwis 3)
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "email": "student@agh.edu.pl",
+  "password": "tajnehaslo123"
+}
+
+### TOKEN
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoic3R1ZGVudEBhZ2guZWR1LnBsIiwiaWF0IjoxNzY3NzA2ODg1LCJleHAiOjE3Njc3MTA0ODV9.a407YtjBPapoz2q5s0Cypj_hsSwpotT3jOgPJldm7D8
+
+### 3. Dodanie książki (Serwis 1) - potrzebny token
+POST http://localhost:3001/api/books
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "title": "Rok 1984",
+  "author": "George Orwell",
+  "year": 1950
+}
+
+### 4. Pobranie listy książek (Serwis 1)
+GET http://localhost:3001/api/books
+
+### 5. Złożenie zamówienia (Serwis 2) - token potrzebny
+POST http://localhost:3002/api/orders
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "userId": 1,
+  "bookId": 1,
+  "quantity": 5
+}
+
+### 6. Pobranie zamówień (Serwis 2)
+GET http://localhost:3002/api/orders/1
